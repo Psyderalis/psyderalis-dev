@@ -1,5 +1,5 @@
 export default function Home() {
   return (
-    <h1>Esta es nuestra app por ahora</h1>
+    <h1>Welcome to my personal page</h1>
   )
 }
