@@ -19,12 +19,10 @@ export default function RootLayout({ children }) {
         <title>Psyderalis DEV</title>
       </head>
       <body>
-        <div className='container'>
         <Header />
-        </div>
-        <main className='container'>
+        <main className={`container-fluid row`}>
           <Navigation />
-          <div className='container'>
+          <div className={`container-fluid col-9`}>
           {children}
           <Footer />
           </div>

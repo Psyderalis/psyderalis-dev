@@ -30,7 +30,7 @@ const links = [
 
 export default function Navigation() {
   return (
-      <nav>
+      <nav className={`container-fluid col-3 text-center`}>
         <ul className={styles.navigation}>
           {links.map(({ label, route }) => (
             <li key={route}>
