@@ -1,6 +1,4 @@
-import Link from "next/link"
-import styles from './Navigation.module.css'
-import { Table } from "react-bootstrap"
+import { Link } from 'react-router-dom'
 
 const links = [
   {
@@ -12,8 +10,8 @@ const links = [
     route: '/about-me'
   },
   {
-    label: 'Proyects',
-    route: '/proyects'
+    label: 'Projects',
+    route: '/projects'
   },
   {
     label: 'Skills',
@@ -31,16 +29,16 @@ const links = [
 
 export default function Navigation() {
   return (
-      <nav className={`container-fluid col-3 text-center`}>
-        <Table>
+      <nav>
+        <ul>
           {links.map(({ label, route }) => (
             <li key={route}>
-              <Link href={route}>
+              <Link to={route}>
                 {label}
               </Link>
             </li>
           ))}
-        </Table>
+        </ul>
       </nav>
   )
 }
