@@ -1,5 +1,6 @@
 import Link from "next/link"
 import styles from './Navigation.module.css'
+import { Table } from "react-bootstrap"
 
 const links = [
   {
@@ -31,7 +32,7 @@ const links = [
 export default function Navigation() {
   return (
       <nav className={`container-fluid col-3 text-center`}>
-        <ul className={styles.navigation}>
+        <Table>
           {links.map(({ label, route }) => (
             <li key={route}>
               <Link href={route}>
@@ -39,7 +40,7 @@ export default function Navigation() {
               </Link>
             </li>
           ))}
-        </ul>
+        </Table>
       </nav>
   )
 }
